@@ -33,7 +33,7 @@ Source code is available at https://github.com/Stability-AI/generative-models .
 
 ### Model Sources
 
-For research purposes, we recommned our `generative-models` Github repository (https://github.com/Stability-AI/generative-models), which implements the most popoular diffusion frameworks (both training and inference) and for which new functionalities like distillation will be added over time.
+For research purposes, we recommend our `generative-models` Github repository (https://github.com/Stability-AI/generative-models), which implements the most popular diffusion frameworks (both training and inference) and for which new functionalities like distillation will be added over time.
 [Clipdrop](https://clipdrop.co/stable-diffusion) provides free SDXL inference.
 
 - **Repository:** https://github.com/Stability-AI/generative-models
