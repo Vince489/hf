@@ -146,12 +146,12 @@ pip install optimum[openvino]
 To load an OpenVINO model and run inference with OpenVINO Runtime, you need to replace `StableDiffusionXLPipeline` with Optimum `OVStableDiffusionXLPipeline`. In case you want to load a PyTorch model and convert it to the OpenVINO format on-the-fly, you can set `export=True`.
 
 ```diff
-- from diffusers import StableDiffusionPipeline
-+ from optimum.intel import OVStableDiffusionPipeline
+- from diffusers import StableDiffusionXLPipeline
++ from optimum.intel import OVStableDiffusionXLPipeline
 
 model_id = "stabilityai/stable-diffusion-xl-base-1.0"
-- pipeline = StableDiffusionPipeline.from_pretrained(model_id)
-+ pipeline = OVStableDiffusionPipeline.from_pretrained(model_id)
+- pipeline = StableDiffusionXLPipeline.from_pretrained(model_id)
++ pipeline = OVStableDiffusionXLPipeline.from_pretrained(model_id)
 prompt = "A majestic lion jumping from a big stone at night"
 image = pipeline(prompt).images[0]
 ```
@@ -170,12 +170,12 @@ pip install optimum[onnxruntime]
 To load an ONNX model and run inference with ONNX Runtime, you need to replace `StableDiffusionXLPipeline` with Optimum `ORTStableDiffusionXLPipeline`. In case you want to load a PyTorch model and convert it to the ONNX format on-the-fly, you can set `export=True`.
 
 ```diff
-- from diffusers import StableDiffusionPipeline
-+ from optimum.onnxruntime import ORTStableDiffusionPipeline
+- from diffusers import StableDiffusionXLPipeline
++ from optimum.onnxruntime import ORTStableDiffusionXLPipeline
 
 model_id = "stabilityai/stable-diffusion-xl-base-1.0"
-- pipeline = StableDiffusionPipeline.from_pretrained(model_id)
-+ pipeline = ORTStableDiffusionPipeline.from_pretrained(model_id)
+- pipeline = StableDiffusionXLPipeline.from_pretrained(model_id)
++ pipeline = ORTStableDiffusionXLPipeline.from_pretrained(model_id)
 prompt = "A majestic lion jumping from a big stone at night"
 image = pipeline(prompt).images[0]
 ```
